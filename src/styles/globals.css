@@ -1,0 +1,28 @@
+:root {
+    /* Colors */
+    --primary: #000000;
+    --white: #ffffff;
+    --light: #808080
+
+    /* Sizes */
+    --small: 1rem;
+    --medium: 2rem;
+    --large: 3rem;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.title {
+    color: var(--primary);
+    font-size: var(--large);
+}
+
+.subtitle {
+    color: var(--light);
+    font-size: var(--medium);
+    font-weight: normal;
+}
