@@ -7,11 +7,22 @@
  
  h1 {
      font-size: 4rem;
-     /* transform: skew(-7deg); */
+     transform: skew(-7deg);
+ }
+
+ @media only screen and (max-width: 768px) {
+     div {
+	 margin: 0 0 4rem 0;
+     }
+     
+     h1 {
+	 font-size: 3rem;
+     }
  }
 
  span {
-     /* background: black; */
+     background: black;
+     padding: 0 0.5rem 0 0.5rem;
  }
 </style>
 
