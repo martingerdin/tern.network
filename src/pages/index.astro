@@ -1,8 +1,10 @@
 ---
 // Component Imports
-import Hero from "../components/Hero.svelte";
+import Logo from "../components/Logo.svelte";
 import Button from "../components/Button.svelte";
 import Link from "../components/Link.svelte";
+import "../styles/bulma.min.css";
+
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -16,19 +18,29 @@ import Link from "../components/Link.svelte";
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/globals.css')}>
     </head>
     <body>
-	<Hero>
-	    <h1 class="title">TERN</h1>
-	    <h2 class="subtitle">
-		A research network started in 2021 aiming to assess the
-		effects of trauma life support training programs
-		on patient outcomes.
-	    </h2>
-	    <Link>
-		Read More
-	    </Link>
-	</Hero>
+	<section class="hero is-fullheight is-info">
+	    <div class="hero-body">
+		<Logo />
+		<div class="columns is-centered">
+		    <div class="column is-4">
+			<h1 class="title is-size-1">
+			    Trauma life support<br />
+			    Effectiveness<br />
+			    Research<br />
+			    Network
+			</h1>
+		    </div>
+		    <div class="column is-4">
+			<p class="subtitle">
+			    TERN is a research network started in 2021
+			    aiming to assess the effects of trauma
+			    life support training programs on patient
+			    outcomes.</p>
+		    </div>
+		</div>
+	    </div>
+	</section>
     </body>
 </html>
