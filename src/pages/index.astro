@@ -1,8 +1,8 @@
 ---
 // Component Imports
-import Logo from "../components/Logo.svelte";
 import Button from "../components/Button.svelte";
 import Link from "../components/Link.svelte";
+import Navbar from "../components/Navbar.svelte";
 import "../styles/bulma.min.css";
 
 
@@ -20,9 +20,11 @@ import "../styles/bulma.min.css";
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
-	<section class="hero is-fullheight is-info">
+	<section class="hero is-large is-info">
+	    <div class="hero-head">
+		<Navbar />
+	    </div>
 	    <div class="hero-body">
-		<Logo />
 		<div class="columns is-centered">
 		    <div class="column is-4">
 			<h1 class="title is-size-1">
