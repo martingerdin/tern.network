@@ -2,23 +2,21 @@
  @import "../styles/bulma.min.css";
 
  div {
-     margin: -4rem 4rem 4rem 4rem;
+     margin: 0rem 4rem 4rem 4rem;
  }
  
  h1 {
      font-size: 4rem;
-     z-index: 2;
-     transform: skew(-7deg);
+     /* transform: skew(-7deg); */
  }
 
  span {
-     background: black;
-     padding: 0.5rem;
+     /* background: black; */
  }
 </style>
 
 <div class="has-text-centered">
     <h1 class="title">
-	<span>&nbsp;Researching Trauma Life Support Training Effectiveness&nbsp;</span>
+	<span>Researching Trauma Life Support Training Effectiveness</span>
     </h1>
 </div>
