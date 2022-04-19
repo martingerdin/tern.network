@@ -4,6 +4,8 @@ import Title from "../components/Title.svelte";
 import Link from "../components/Link.svelte";
 import Navbar from "../components/Navbar.svelte";
 import NewsContainer from "../components/NewsContainer.svelte";
+import About from "../components/About.svelte";
+import News from "../components/News.svelte";
 import "../styles/bulma.min.css";
 
 // Full Astro Component Syntax:
@@ -42,11 +44,21 @@ import "../styles/bulma.min.css";
 			    </buttons>
 			</div>
 			<div class="column is-4">
-			    <NewsContainer />
+			    <h3 class="title">Latest News</h3>
+			    <div class="box">
+				<NewsContainer />
+			    </div>
+			    <div class="buttons">
+				<button class="button is-outlined is-info is-inverted">
+				    Read All News
+				</button>
+			    </div>
 			</div>
 		    </div>
 		</div>
 	    </div>
 	</section>
+	<About />
+	<News />
     </body>
 </html>

@@ -2,6 +2,7 @@
  @import "../styles/bulma.min.css";
 
  a {
+     color: black;
      text-decoration: underline;
  }
 </style>
