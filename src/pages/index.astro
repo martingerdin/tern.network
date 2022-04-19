@@ -1,10 +1,9 @@
 ---
 // Component Imports
-import Button from "../components/Button.svelte";
+import Title from "../components/Title.svelte";
 import Link from "../components/Link.svelte";
 import Navbar from "../components/Navbar.svelte";
 import "../styles/bulma.min.css";
-
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -27,19 +26,20 @@ import "../styles/bulma.min.css";
 	    <div class="hero-body">
 		<div class="columns is-centered">
 		    <div class="column is-4">
-			<h1 class="title is-size-1">
-			    Trauma life support<br />
-			    Effectiveness<br />
-			    Research<br />
-			    Network
-			</h1>
+			<Title />
 		    </div>
 		    <div class="column is-4">
-			<p class="subtitle">
+			<p class="subtitle is-size-4">
 			    TERN is a research network started in 2021
 			    aiming to assess the effects of trauma
 			    life support training programs on patient
-			    outcomes.</p>
+			    outcomes.
+			</p>
+			<buttons>
+			    <button class="button is-medium is-outlined is-info is-inverted">
+				Read More
+			    </button>
+			</buttons>
 		    </div>
 		</div>
 	    </div>
