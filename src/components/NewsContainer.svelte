@@ -11,7 +11,7 @@
     <h3 class="title">Latest News</h3>
     <div class="box">
 	{#each news as item}
-	    <NewsItem src={item.src}>
+	    <NewsItem src={item.src} url={item.url}>
 		<span slot="title">
 		    {item.title}
 		</span>
