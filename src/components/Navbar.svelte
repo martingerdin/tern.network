@@ -2,7 +2,7 @@
  import Logo from "./Logo.svelte";
 </script>
 
-<nav class="level">
+<nav class="level is-mobile">
 
     <p class="level-item has-text-centered">
 	<!-- <a class="link is-info">Home</a> -->
