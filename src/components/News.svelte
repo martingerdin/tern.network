@@ -8,7 +8,7 @@
 
 <section class="section">
     <div class="container">
-	<h1 class="title">News</h1>
+	<h1 class="title" id="news">News</h1>
 	<NewsContainer />
     </div>
 </section>
