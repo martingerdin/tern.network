@@ -3,7 +3,6 @@
 </script>
 
 <nav class="level is-mobile">
-
     <p class="level-item has-text-centered">
 	<!-- <a class="link is-info">Home</a> -->
     </p>
