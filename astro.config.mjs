@@ -8,8 +8,7 @@
 
 // @ts-check
 
-import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/functions";
+import vercel from "@astrojs/vercel";
 
 export default /** @type {import('astro').AstroUserConfig} */ ({
 	// Enable the Svelte renderer to support Svelte components.
