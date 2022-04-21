@@ -7,7 +7,12 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
+
+import { defineConfig } from "astro/config";
+import vercel from "@astrojs/vercel/functions";
+
 export default /** @type {import('astro').AstroUserConfig} */ ({
 	// Enable the Svelte renderer to support Svelte components.
 	renderers: ['@astrojs/renderer-svelte'],
+	adapters: vercel(),
 });
