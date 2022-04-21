@@ -1,10 +1,42 @@
 <style>
-    @import "../styles/bulma.min.css";
+ @import "../styles/bulma.min.css";
 </style>
 
 <section class="section">
     <div class="container">
-	<h1 class="title" id="about">About</h1>
-	<p></p>
+	<h2 class="title" id="about">About</h2>
+	<h3 class="subtitle">Trauma is a Threat to Global Health</h3>
+	<div class="content">
+	<p>The reduction of mortality and morbidity from trauma is
+	    part of the Sustainable Development Goals. The trauma life
+	    support training programs Advanced Trauma Life Support (ATLS)
+	    and Primary Trauma Care (PTC) are widely used to improve
+	    hospital trauma care but no high quality evidence exists to
+	    show that these programs improve patient outcomes</p>
+	</div>
+	<h3 class="subtitle">A Network of Researchers</h3>
+	<div class="content">
+	    <p>The purpose of the Trauma life support training Effectiveness
+		Research Network (TERN) is to develop a research project to
+		assess the effects of ATLS and PTC training on patient
+		outcomes compared to standard care.</p>
+	    <p>The specific aims of the network are to:</p>
+	    <ol>
+		<li>Assess the feasibility of conducting a cluster randomised
+		    contrliled trial (CRCT) on the effect of ATLS and PTC training on
+		    patient outcomes compared to standard care</li>
+		<li>Conduct community consultations to elicit community members' views
+		    on the acceptability and relevance of the planned research, and to
+		    invlive communities in the choice of outcome measures</li>
+		<li>Conduct a pilot study of ATLS and PTC training compared to
+		    standard care</li>
+		<li>Develop joint research applications and promote capacity building
+		    by framing topics for PhD projects based on the outcomes of the
+		    pilot study</li>
+	    </ol>
+	</div>
+	<h3 class="subtitle">Funding</h3>
+	<p>Our network and the pilot trial is funded by the <a href="https://www.vr.se/english.html">Swedish Research Council</a> and the <a href="https://laerdalfoundation.org/">Laerdal Foundation</a></p>
     </div>
+    
 </section>
