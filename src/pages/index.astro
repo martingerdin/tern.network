@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar.svelte";
 import NewsContainer from "../components/NewsContainer.svelte";
 import About from "../components/About.svelte";
 import News from "../components/News.svelte";
+import Footer from "../components/Footer.svelte";
 import { getNews } from "./api/getNews.js";
 import "../styles/bulma.min.css";
 
@@ -67,5 +68,6 @@ const news = getNews()
 	</section>
 	<About />
 	<News />
+	<Footer />
     </body>
 </html>
