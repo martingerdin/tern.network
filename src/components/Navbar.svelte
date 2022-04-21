@@ -4,18 +4,18 @@
 
 <nav class="level is-mobile">
     <p class="level-item has-text-centered">
-	<!-- <a class="link is-info">Home</a> -->
+	<a href="/">Home</a>
     </p>
     <p class="level-item has-text-centered">
-	<a href="#about" class="link is-info">About</a>
+	<a href="#about">About</a>
     </p>
     <p class="level-item has-text-centered">
 	<a href="/"><Logo /></a>
     </p>
     <p class="level-item has-text-centered">
-	<a href="#news" class="link is-info">News</a>
+	<a href="#news">News</a>
     </p>
     <p class="level-item has-text-centered">
-	<!-- <a class="link is-info">Contact</a> -->
+	<a href="mailto:martin.gerdin@ki.se">Contact</a>
     </p>
 </nav>
