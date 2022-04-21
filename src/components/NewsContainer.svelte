@@ -1,6 +1,8 @@
 <script>
  import NewsItem from "../components/NewsItem.svelte";
- import { news } from "../data/news.js";
+ 
+ import { getNews } from "../pages/api/getNews.js";
+ const news = getNews();
 </script>
 
 <style>
