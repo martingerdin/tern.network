@@ -10,7 +10,7 @@
 	<a href="#about" class="link is-info">About</a>
     </p>
     <p class="level-item has-text-centered">
-	<Logo />
+	<a href="/"><Logo /></a>
     </p>
     <p class="level-item has-text-centered">
 	<a href="#news" class="link is-info">News</a>
