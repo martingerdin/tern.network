@@ -14,11 +14,13 @@
 </script>
 
 <article class="media">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src={src}>
-    </p>
-  </figure>
+    {#if src !== ""}
+	<figure class="media-left">
+	    <p class="image is-64x64">
+		<img src={src}>
+	    </p>
+	</figure>
+    {/if}
   <div class="media-content">
     <div class="content">
       <p>
