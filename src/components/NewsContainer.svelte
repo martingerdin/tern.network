@@ -1,8 +1,7 @@
 <script>
  import NewsItem from "../components/NewsItem.svelte";
- 
- import { getNews } from "../pages/api/getNews.js";
- const news = getNews();
+
+ export let news = [{title: "There are no news"}];
 </script>
 
 <style>

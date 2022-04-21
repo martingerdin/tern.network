@@ -1,4 +1,7 @@
 ---
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
 // Component Imports
 import Title from "../components/Title.svelte";
 import Link from "../components/Link.svelte";
@@ -6,10 +9,10 @@ import Navbar from "../components/Navbar.svelte";
 import NewsContainer from "../components/NewsContainer.svelte";
 import About from "../components/About.svelte";
 import News from "../components/News.svelte";
+import { getNews } from "./api/getNews.js";
 import "../styles/bulma.min.css";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+const news = getNews()
 ---
 
 <html lang="en">
@@ -48,7 +51,7 @@ import "../styles/bulma.min.css";
 			<div class="column is-4">
 			    <h3 class="title">Latest News</h3>
 			    <div class="box">
-				<NewsContainer />
+				<NewsContainer news={news.slice(0, 2)} />
 			    </div>
 			    <div class="buttons">
 				<button class="button is-outlined is-info is-inverted">
