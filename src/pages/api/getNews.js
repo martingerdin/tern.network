@@ -1,5 +1,8 @@
 import contentful from "contentful";
 
+
+/*
+
 export function getNews() {
   
   const news = [
@@ -55,27 +58,26 @@ export function getNews() {
 
   return news;
 }
+*/
 
-/*
-  const client = contentful.createClient({
+
+const client = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.CONTENTFUL_DELIVERY_API_KEY,
-  });
+});
 
-  export async function getNews() {
-  const news = await client.getEntries();
+export async function getNews() {
+  const news = await client.getEntries({content_type: "newsItem"}).items;
 
-  console.log(news);
-  
   if (!news) {
-  return new Response(null, {
-  status: 404,
-  statusText: 'Not found'
-  });
+    return new Response(null, {
+      status: 404,
+      statusText: 'Not found'
+    });
   }
 
   return new Response(JSON.stringify(news), {
-  status: 200
+    status: 200
   });
-  }
-*/
+}
+
