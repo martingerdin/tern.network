@@ -67,7 +67,8 @@ const client = contentful.createClient({
 });
 
 export async function getNews() {
-  const news = await client.getEntries({content_type: "newsItem"}).items;
+  const { items } = await client.getEntries({content_type: "newsItem"});
+  const news = items.map(item => item.fields);
 
   if (!news) {
     return new Response(null, {

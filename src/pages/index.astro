@@ -13,7 +13,9 @@ import Footer from "../components/Footer.svelte";
 import { getNews } from "./api/getNews.js";
 import "../styles/bulma.min.css";
 
-const news = await getNews()
+
+const news = await getNews().then(news => news.json());
+
 console.log(news);
 ---
 
