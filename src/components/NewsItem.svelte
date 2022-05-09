@@ -9,7 +9,7 @@
 
 
 <script>
- export let src = "https://bulma.io/images/placeholders/128x128.png";
+ export let src = "";
  export let url;
 </script>
 
