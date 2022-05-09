@@ -3,10 +3,8 @@
 </style>
 
 <script>
+ export let news;
  import NewsContainer from "./NewsContainer.svelte";
- import { getNews } from "../pages/api/getNews.js";
-
- const news = getNews();
 </script>
 
 <section class="section">
