@@ -9,15 +9,15 @@
 </style>
 
 {#each news as item}
-    <NewsItem src={item.src} url={item.url}>
+    <NewsItem src={item.imageUrl} url={item.linkUrl}>
 	<span slot="title">
 	    {item.title}
 	</span>
 	<span slot="author">
-	    @{item.author}
+	    @{item.author.fields.username}
 	</span>
 	<span slot="date">
-	    {item.date}
+	    {item.date.substring(0, 10)}
 	</span>
 	<span slot="content">
 	    {item.content}

@@ -15,7 +15,9 @@ import "../styles/bulma.min.css";
 
 
 const news = await getNews().then(news => news.json());
-
+news.sort((a, b) => {
+return new Date(b.date) - new Date(a.date);
+});
 console.log(news);
 ---
 
