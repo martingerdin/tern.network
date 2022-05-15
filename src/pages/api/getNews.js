@@ -1,6 +1,5 @@
 import contentful from "contentful";
 
-
 /*
 
 export function getNews() {
@@ -30,7 +29,7 @@ export function getNews() {
       content: "We have received ethical approval from the institutional ethics committee at the Medica Superspeciality Hospital in Kolkata.",
       url: "",
     },
-    {
+    
       src: "",
       title: "New ethical approval",
       author: "tern",
@@ -61,9 +60,13 @@ export function getNews() {
 */
 
 
+
+const space = process.env.CONTENTFUL_SPACE_ID ?? import.meta.env.CONTENTFUL_SPACE_ID;
+const accessToken = process.env.CONTENTFUL_DELIVERY_API_KEY ?? import.meta.env.CONTENTFUL_DELIVERY_API_KEY;
+
 const client = contentful.createClient({
-  space: import.meta.env.CONTENTFUL_SPACE_ID,
-  accessToken: import.meta.env.CONTENTFUL_DELIVERY_API_KEY,
+  space: space,
+  accessToken: accessToken,
 });
 
 export async function getNews() {
