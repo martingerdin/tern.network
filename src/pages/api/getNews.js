@@ -61,7 +61,7 @@ export function getNews() {
 
 
 
-export async function getNews() {
+export async function get() {
   const space = process.env.CONTENTFUL_SPACE_ID ?? import.meta.env.CONTENTFUL_SPACE_ID;
   const accessToken = process.env.CONTENTFUL_DELIVERY_API_KEY ?? import.meta.env.CONTENTFUL_DELIVERY_API_KEY;
 
