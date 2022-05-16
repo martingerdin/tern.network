@@ -61,15 +61,15 @@ export function getNews() {
 
 
 
-const space = process.env.CONTENTFUL_SPACE_ID ?? import.meta.env.CONTENTFUL_SPACE_ID;
-const accessToken = process.env.CONTENTFUL_DELIVERY_API_KEY ?? import.meta.env.CONTENTFUL_DELIVERY_API_KEY;
-
-const client = contentful.createClient({
-  space: space,
-  accessToken: accessToken,
-});
-
 export async function getNews() {
+  const space = process.env.CONTENTFUL_SPACE_ID ?? import.meta.env.CONTENTFUL_SPACE_ID;
+  const accessToken = process.env.CONTENTFUL_DELIVERY_API_KEY ?? import.meta.env.CONTENTFUL_DELIVERY_API_KEY;
+
+  const client = contentful.createClient({
+    space: space,
+    accessToken: accessToken,
+  });
+  
   const { items } = await client.getEntries({content_type: "newsItem"});
   const news = items.map(item => item.fields);
 
