@@ -10,7 +10,7 @@
 
 <script>
  export let src = "";
- export let url;
+ export let url = "";
 </script>
 
 <article class="media">
