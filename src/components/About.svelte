@@ -7,12 +7,13 @@
 	<h2 class="title" id="about">About</h2>
 	<h3 class="subtitle">Trauma is a Threat to Global Health</h3>
 	<div class="content">
-	<p>The reduction of mortality and morbidity from trauma is
-	    part of the Sustainable Development Goals. The trauma life
-	    support training programs Advanced Trauma Life Support (ATLS)
-	    and Primary Trauma Care (PTC) are widely used to improve
-	    hospital trauma care but no high quality evidence exists to
-	    show that these programs improve patient outcomes</p>
+	    <p>The reduction of mortality and morbidity from trauma is
+		part of the <a href="https://sdgs.un.org/goals/goal3">Sustainable Development Goals</a>. The
+	    trauma life support training programs Advanced Trauma Life
+	    Support (ATLS) and Primary Trauma Care (PTC) are widely
+	    used to improve hospital trauma care but no high quality
+	    evidence exists to show that these programs improve
+	    patient outcomes</p>
 	</div>
 	<h3 class="subtitle">A Network of Researchers</h3>
 	<div class="content">
