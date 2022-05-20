@@ -24,7 +24,7 @@
 	    <p>The specific aims of the network are to:</p>
 	    <ol>
 		<li>Assess the feasibility of conducting a cluster randomised
-		    contrliled trial (CRCT) on the effect of ATLS and PTC training on
+		    controlled trial (CRCT) on the effect of ATLS and PTC training on
 		    patient outcomes compared to standard care</li>
 		<li>Conduct community consultations to elicit community members' views
 		    on the acceptability and relevance of the planned research, and to
