@@ -14,6 +14,6 @@ import svelte from "@astrojs/svelte";
 
 export default defineConfig ({
 	// Enable the Svelte renderer to support Svelte components.
+	adapter: vercel(),   	 
 	integrations: [svelte(),],
-	adapters: vercel(),
 });
