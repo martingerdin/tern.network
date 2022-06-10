@@ -9,13 +9,13 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^0.2.2",
-    "astro": "^1.0.0-beta.17",
-    "postcss-load-config": "^3.1.1"
+    "@astrojs/vercel": "^0.2.3",
+    "astro": "^1.0.0-beta.42",
+    "postcss-load-config": "^4.0.1"
   },
   "dependencies": {
-    "@astrojs/svelte": "^0.1.1",
-    "contentful": "^9.1.24",
-    "dotenv": "^16.0.0"
+    "@astrojs/svelte": "^0.1.4",
+    "contentful": "^9.1.32",
+    "dotenv": "^16.0.1"
   }
 }
