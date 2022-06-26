@@ -1,14 +1,16 @@
-<script>
- import NewsItem from "../components/NewsItem.svelte";
-
- export let news = [{title: "There are no news"}];
-</script>
+---
+import NewsItem from "../components/NewsItem.astro";
+const {news = [{title: "There are no news"}]} = Astro.props;
+---
 
 <style>
  @import "../styles/bulma.min.css";
 </style>
 
-{#each news as item}
+<div>
+    {
+    news.map(item => {
+    return (
     <NewsItem src={item.imageUrl} url={item.linkUrl}>
 	<span slot="title">
 	    {item.title}
@@ -23,5 +25,7 @@
 	    {item.content}
 	</span>
     </NewsItem>
-{/each}
-
+    );
+    })
+    }
+</div>
