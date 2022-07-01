@@ -2,20 +2,28 @@
 import Logo from "./Logo.astro";
 ---
 
-<nav class="level is-mobile">
+<style>
+  a {
+    color: white;
+  }
+</style>
+
+<section class="has-background-info">
+  <nav class="level is-mobile">
     <p class="level-item has-text-centered">
-	<a href="/">Home</a>
+      <a href="/">Home</a>
     </p>
     <p class="level-item has-text-centered">
-	<a href="#about">About</a>
+      <a href="#about">About</a>
     </p>
     <p class="level-item has-text-centered">
-	<a href="/"><Logo /></a>
+      <a href="/"><Logo /></a>
     </p>
     <p class="level-item has-text-centered">
-	<a href="#news">News</a>
+      <a href="#news">News</a>
     </p>
     <p class="level-item has-text-centered">
-	<a href="mailto:martin.gerdin@ki.se">Contact</a>
+      <a href="mailto:martin.gerdin@ki.se">Contact</a>
     </p>
-</nav>
+  </nav>
+</section>
