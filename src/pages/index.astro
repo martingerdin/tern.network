@@ -5,6 +5,7 @@
 // Component Imports
 import Title from "../components/Title.astro";
 import Navbar from "../components/Navbar.astro";
+import OngoingPilotTrial from "../components/OngoingPilotTrial.astro";
 import NewsContainer from "../components/NewsContainer.astro";
 import About from "../components/About.astro";
 import News from "../components/News.astro";
@@ -32,17 +33,7 @@ console.log(news);
   </head>
   <body>
     <Navbar />
-    <section class="hero is-medium is-dark">
-      <div class="hero-body">
-	<div class="container has-text-centered">
-	  <h2 class="title">Ongoing Pilot Trial</h2>
-	  <div class="buttons is-centered">
-	    <a class="button is-light is-outlined is-large is-rounded" href="https://clinicaltrials.gov/ct2/show/NCT05417243">ClinicalTrials.gov NCT05417243</a>
-	    <a class="button is-light is-outlined is-large is-rounded" href="https://bmjopen.bmj.com/content/12/4/e057504.full">Published Protocol</a>
-	  </div>
-	</div>
-      </div>
-    </section>
+    <OngoingPilotTrial />
     <section class="hero is-medium is-info">
 	<div class="hero-body">
 	  <Title />
