@@ -15,63 +15,64 @@ import "../styles/bulma.min.css";
 
 const news = await get().then(news => news.json());
 news.sort((a, b) => {
-return new Date(b.date) - new Date(a.date);
+  return new Date(b.date) - new Date(a.date);
 });
 console.log(news);
 ---
 
 <html lang="en">
-    <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-	<section class="hero is-fullheight is-info">
-	    <div class="hero-head">
-		<Navbar />
+  <head>
+    <title>TERN</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="hero is-fullheight is-info">
+      <div class="hero-head">
+	<Navbar />
+      </div>
+      <div class="hero-body">
+	<div>
+	  <Title />
+	  <div class="columns is-centered">
+	    <div class="column is-4">
+	      <p class="subtitle is-size-3">
+		TERN is a research network started in 2021
+		aiming to assess the effects of trauma
+		life support training programs on patient
+		outcomes.
+	      </p>
+	      <buttons>
+		<button class="button is-medium is-outlined is-info is-inverted">
+		  <a href="#about">
+		    Read More
+		  </a>
+		</button>
+	      </buttons>
 	    </div>
-	    <div class="hero-body">
-		<div>
-		    <Title />
-		    <div class="columns is-centered">
-			<div class="column is-4">
-			    <p class="subtitle is-size-3">
-				TERN is a research network started in 2021
-				aiming to assess the effects of trauma
-				life support training programs on patient
-				outcomes.
-			    </p>
-			    <buttons>
-				<button class="button is-medium is-outlined is-info is-inverted">
-				    <a href="#about">
-					Read More
-				    </a>
-				</button>
-			    </buttons>
-			</div>
-			<div class="column is-4">
-			    <h3 class="title">Latest News</h3>
-			    <div class="box">
-				<NewsContainer news={news.slice(0, 2)} />
-			    </div>
-			    <div class="buttons">
-				<button class="button is-outlined is-info is-inverted">
-				    <a href="#news">
-					Read All News
-				    </a>
-				</button>
-			    </div>
-			</div>
-		    </div>
-		</div>
+	    <div class="column is-4">
+	      <h3 class="title">Latest News</h3>
+	      <div class="box">
+		<NewsContainer news={news.slice(0, 2)} />
+	      </div>
+	      <div class="buttons">
+		<button class="button is-outlined is-info is-inverted">
+		  <a href="#news">
+		    Read All News
+		  </a>
+		</button>
+	      </div>
 	    </div>
-	</section>
-	<About />
-	<News news={news} />
-	<Footer />
-    </body>
+	  </div>
+	</div>
+      </div>
+    </section>
+    <About />
+    <News news={news} />
+    <Footer />
+  </body>
 </html>
