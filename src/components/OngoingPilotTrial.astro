@@ -9,6 +9,9 @@ const client = contentful.createClient({
 });
 
 const enrolledPatients = await client.getEntry("78TOLnzeDAxvjhMRnnsK2I");
+const { numberOfEnrolledPatients, dateAdded } = enrolledPatients.fields;
+const totalEnrolledPatients = numberOfEnrolledPatients.reduce((a, b) => a + b, 0);
+const targetSampleSize = 306;
 console.log(enrolledPatients);
 ---
 
@@ -26,7 +29,29 @@ console.log(enrolledPatients);
 <section class="hero is-medium is-dark">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h2 class="title">Ongoing Pilot Trial <a href="https://clinicaltrials.gov/ct2/show/NCT05417243">#NCT05417243</a></h2>
+      <h2 class="title">Ongoing Pilot Trial</h2>
+      <h3 class="subtitle">
+	<a href="https://clinicaltrials.gov/ct2/show/NCT05417243">#NCT05417243</a>
+      </h3>
+      <h3 class="heading">Enrolled Participants</h3>
+      <p class="title is-4">{totalEnrolledPatients}/{targetSampleSize}</p>
+      <progress class="progress is-warning" value={totalEnrolledPatients} max={targetSampleSize}>{totalEnrolledPatients}</progess>
+      <h3 class="heading">Per Centre</h3>
+      <nav class="level">
+	{numberOfEnrolledPatients
+	 .filter(item => item > 0)
+	 .map((item, key) => {
+	return (
+	  <div key={key} class="level-item has-text-centered">
+	    <p class="title is-4">
+	      {item}
+	    </p>
+	  </div>
+	)
+	})}
+      </nav>
+      <h3 class="heading">Updated</h3>
+      <p class="title is-4">{new Date(dateAdded).toDateString()}</p>
       <div class="buttons is-centered">
 	<a class="button is-light is-outlined is-large is-rounded" href="https://bmjopen.bmj.com/content/12/4/e057504.full">Published Protocol</a>
       </div>
