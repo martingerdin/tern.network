@@ -1,3 +1,17 @@
+---
+import contentful from "contentful";
+const space = process.env.CONTENTFUL_SPACE_ID ?? import.meta.env.CONTENTFUL_SPACE_ID;
+const accessToken = process.env.CONTENTFUL_DELIVERY_API_KEY ?? import.meta.env.CONTENTFUL_DELIVERY_API_KEY;
+
+const client = contentful.createClient({
+  space: space,
+  accessToken: accessToken,
+});
+
+const enrolledPatients = await client.getEntry("78TOLnzeDAxvjhMRnnsK2I");
+console.log(enrolledPatients);
+---
+
 <style>
   a {
     text-decoration: underline;
