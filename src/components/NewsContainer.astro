@@ -11,7 +11,7 @@ const {news = [{title: "There are no news"}]} = Astro.props;
   {
     news.map(item => {
       return (
-	<NewsItem src={item.imageUrl} url={item.linkUrl}>
+	<NewsItem src={item.image?.fields.file.url} url={item.linkUrl}>
 	  <span slot="title">
 	    {item.title}
 	  </span>

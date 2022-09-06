@@ -16,7 +16,7 @@ const { src = "", url = "" } = Astro.props;
     (
     <figure class="media-left">
 	<p class="image is-64x64">
-	    <img src={src}>
+	    <img src={`https://${src}?w=64&h=64&fit=fill`}>
 	</p>
     </figure>
     )}
