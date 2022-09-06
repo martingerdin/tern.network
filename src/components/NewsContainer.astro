@@ -4,28 +4,28 @@ const {news = [{title: "There are no news"}]} = Astro.props;
 ---
 
 <style>
- @import "../styles/bulma.min.css";
+  @import "../styles/bulma.min.css";
 </style>
 
 <div>
-    {
+  {
     news.map(item => {
-    return (
-    <NewsItem src={item.imageUrl} url={item.linkUrl}>
-	<span slot="title">
+      return (
+	<NewsItem src={item.imageUrl} url={item.linkUrl}>
+	  <span slot="title">
 	    {item.title}
-	</span>
-	<span slot="author">
+	  </span>
+	  <span slot="author">
 	    @{item.author.fields.username}
-	</span>
-	<span slot="date">
+	  </span>
+	  <span slot="date">
 	    {item.date.substring(0, 10)}
-	</span>
-	<span slot="content">
+	  </span>
+	  <span slot="content">
 	    {item.content}
-	</span>
-    </NewsItem>
-    );
+	  </span>
+	</NewsItem>
+      );
     })
-    }
+  }
 </div>
