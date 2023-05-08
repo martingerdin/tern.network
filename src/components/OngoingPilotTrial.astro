@@ -1,6 +1,8 @@
 ---
 import contentful from "contentful";
 import Title from "./Title.astro";
+
+/*
 const space = process.env.CONTENTFUL_SPACE_ID ?? import.meta.env.CONTENTFUL_SPACE_ID;
 const accessToken = process.env.CONTENTFUL_DELIVERY_API_KEY ?? import.meta.env.CONTENTFUL_DELIVERY_API_KEY;
 
@@ -14,6 +16,7 @@ const { numberOfEnrolledPatients, dateAdded } = enrolledPatients.fields;
 const totalEnrolledPatients = numberOfEnrolledPatients.reduce((a, b) => a + b, 0);
 const targetSampleSize = 306;
 console.log(enrolledPatients);
+*/
 ---
 
 <style>
@@ -35,28 +38,21 @@ console.log(enrolledPatients);
 <section class="hero is-medium is-dark">
     <div class="hero-body">
 	<div class="container has-text-centered">
-	    <Title text="Ongoing Pilot Trial" />
-	    <h3 class="title">Enrolled Participants</h3>
-	    <div class="box has-background-success">
-		<h3 class="heading">Total</h3>
-		<p class="title is-4">{totalEnrolledPatients}/{targetSampleSize}</p>
-		<progress class="progress is-warning" value={totalEnrolledPatients} max={targetSampleSize}>{totalEnrolledPatients}</progess>
-		    <h3 class="heading">Per Centre</h3>
-		    <nav class="level">
-			{numberOfEnrolledPatients
-			.filter(item => item > 0)
-			.map((item, key) => {
-			return (
-			<div key={key} class="level-item has-text-centered">
-			    <p class="title is-4">
-				{item}
-			    </p>
-			</div>
-			)
-			})}
-		    </nav>
-		    <h3 class="heading">Updated</h3>
-		    <p class="title is-4">{new Date(dateAdded).toDateString()}</p>
+	    <Title text="Pilot Trial Completed!" />
+	    <h3 class="title">362 Participants Enrolled</h3>
+	    <div class="content">
+		The pilot study aimed to assess the feasibility of
+		conducting a cluster randomised controlled trial
+		comparing Advanced Trauma Life Support® (ATLS®) and
+		Primary Trauma Care (PTC) with standard care. Seven
+		hospitals across India participated and the trial
+		included adult patients who presented with history of
+		trauma. The study included both participant and
+		feasibility outcomes. The primary participant outcome
+		was all-cause mortality within 30 days from the time
+		of arrival to the emergency department. We are
+		currently writing up the results of this pilot, so
+		stay tuned!
 	    </div>
 	    <h3 class="title">More</h3>
 	    <div class="buttons is-centered">
