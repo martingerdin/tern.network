@@ -1,0 +1,14 @@
+---
+import { Member } from "./Member.astro";
+import { get as getContent } from "../pages/api/getContent.js";
+
+let members = await getContent({ type: "member"}).then(content => content.json());
+---
+
+<style>
+ @import "../styles/bulma.min.css";
+</style>
+
+<section class="section">
+    {members.map(member => <Member />)}
+</section>
