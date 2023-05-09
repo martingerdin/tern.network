@@ -9,5 +9,6 @@ import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig ({
 	// Enable the Svelte renderer to support Svelte components.
+	output: 'server',
 	adapter: vercel(),   	 
 });

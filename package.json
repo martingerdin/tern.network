@@ -9,12 +9,12 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^0.2.3",
-    "astro": "^1.0.0-beta.56",
+    "@astrojs/vercel": "^3.3.0",
+    "astro": "^2.4.3",
     "postcss-load-config": "^4.0.1"
   },
   "dependencies": {
-    "contentful": "^9.1.32",
+    "contentful": "^10.1.8",
     "dotenv": "^16.0.1"
   }
 }
