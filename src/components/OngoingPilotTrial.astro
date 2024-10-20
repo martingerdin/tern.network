@@ -56,8 +56,20 @@ console.log(enrolledPatients);
 	    </div>
 	    <h3 class="title">More</h3>
 	    <div class="buttons is-centered">
-		<a class="button is-light is-outlined is-large is-rounded" href="https://bmjopen.bmj.com/content/12/4/e057504.full">Published Protocol</a>
-		<a class="button is-light is-outlined is-large is-rounded" href="https://clinicaltrials.gov/ct2/show/NCT05417243">ClinicalTrials.gov Record</a>
+		{[
+			{ href: "https://doi.org/10.1101/2024.03.13.24304236", text: "Pre-print" },
+			{ href: "https://bmjopen.bmj.com/content/12/4/e057504.full", text: "Published Protocol" },
+			{ href: "https://clinicaltrials.gov/ct2/show/NCT05417243", text: "ClinicalTrials.gov Record" }
+		].map(link => (
+			<a class="button is-light is-outlined is-large is-rounded" href={link.href}>
+				<span>{link.text}</span>
+				<span class="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+					</svg>
+				</span>
+			</a>
+		))}
 	    </div>
 	</div>
     </div>
